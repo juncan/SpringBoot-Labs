@@ -4,5 +4,5 @@ import cn.iocoder.springboot.lab15.springdataelasticsearch.dataobject.ESProductD
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 public interface ProductRepository extends ElasticsearchRepository<ESProductDO, Integer> {
-
+    ESProductDO findByNameAndCid(String name, Integer cid);
 }

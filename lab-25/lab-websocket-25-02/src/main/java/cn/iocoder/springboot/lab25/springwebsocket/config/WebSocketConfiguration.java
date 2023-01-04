@@ -14,7 +14,7 @@ public class WebSocketConfiguration implements WebSocketConfigurer {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(this.webSocketHandler(), "/") // 配置处理器
+        registry.addHandler(this.webSocketHandler(), "/**") // 配置处理器
                 .addInterceptors(new DemoWebSocketShakeInterceptor()) // 配置拦截器
                 .setAllowedOrigins("*"); // 解决跨域问题
     }
